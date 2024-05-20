@@ -1,0 +1,27 @@
+        <Dataset>
+Variable          Definition
+isDGA           the classification of the domain (either legit (0) or dga (1)).
+domain          the second level domain SLD (e.g., facebook).
+host            the top level domain (TLD) and second level domain (e.g., facebook.com). It can contain 
+subclass        the malware family the domain belongs to (e.g., cryptolocker).
+
+
+        <After feature engineering>
+Variable                        Definition
+d_length                    length of the second level domain
+unique_char_count           number of unique characters 
+unique_letter_count         number of unique letters
+unique_digit_count          number of unique digits
+letter_ratio                the ratio of letters to the length of the domain name
+digit_ratio                 the ratio of digits to the length of the domain name
+unique_letter_ratio         the ratio of unique letters to unique characters 
+unique_digit_ratio          the ratio of unique digits to unique characters
+special_char_ratio          the ratio of special characters to the length of the domain name
+consonant_ratio             ratio of consonant characters
+vowel_ratio                 ratio of vowels
+longest_consonant_string    length of the longest consonant string
+longest_vowel_string        length of the longest vowel sequence
+longest_number_string       length of the longest string of numbers
+entropy                     entropy of a domain name
+ngrams                      n-grams for each domain name
+
