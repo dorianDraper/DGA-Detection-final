@@ -6,11 +6,13 @@ import numpy as np
 from pickle import load, dump
 from collections import Counter
 
-# st.set_page_config(page_title="DGA Detector", page_icon="🔒", layout="centered") # initial_sidebar_state="collapsed"
+st.set_page_config(page_title="DGA Detector", 
+                   page_icon="⚡", 
+                   layout="centered") # initial_sidebar_state="collapsed"
 
 st.markdown(
     """
-    This app is a DGA detector. It uses a machine learning model to predict if a domain is legit or DGA-generated. 
+    This app is a DGA detector. It uses a machine learning model to predict if a domain is legit ✅ or DGA-generated ❌. 
     Please enter a domain name in the text box and click the button to check the prediction.
 """
 )

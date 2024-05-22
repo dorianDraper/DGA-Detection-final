@@ -2,7 +2,7 @@ import streamlit as st
 
 
 st.set_page_config(page_title="DGA Detector", 
-                   page_icon="👋", 
+                   page_icon="❔", 
                    layout="centered")
 
 st.write("# Domain Generation Algorithms (DGAs)")
@@ -34,7 +34,13 @@ st.markdown("""
     - :red[DNS Queries]: The infected device makes DNS queries to resolve these generated domain names, attempting to connect to the C&C server.
     - :red[Successful Connection]: If one of these domains resolves to an IP address controlled by the attacker, the malware establishes a connection to the 
     C&C server, allowing the attacker to issue commands, steal data, or update the malware.
-    
+            """
+)
+
+st.image('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/src/img/botmaster.png')
+
+st.markdown(
+    """   
     #### The Challenge for Defenders
     Traditional DNS filtering and blocking techniques struggle against DGA-based attacks because of the dynamic nature of the generated domain names. 
     Security teams must employ advanced machine learning models to detect and classify DGA-generated domain names from legitimate ones. 
