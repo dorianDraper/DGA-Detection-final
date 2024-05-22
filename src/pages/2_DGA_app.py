@@ -6,6 +6,14 @@ import numpy as np
 from pickle import load, dump
 from collections import Counter
 
+# st.set_page_config(page_title="DGA Detector", page_icon="🔒", layout="centered") # initial_sidebar_state="collapsed"
+
+st.markdown(
+    """
+    This app is a DGA detector. It uses a machine learning model to predict if a domain is legit or DGA-generated. 
+    Please enter a domain name in the text box and click the button to check the prediction.
+"""
+)
 
 def extract_subdomain_and_domain(host):
     ext = tldextract.extract(host)
@@ -48,7 +56,7 @@ def entropy(host):
     return -sum( count/lns * np.log2(count/lns) for count in p.values())
 
 
-stopwords = load(open('../data/raw/top_english_words.pkl', 'rb'))
+stopwords = load(open('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/data/raw/top_english_words.pkl', 'rb'))
 dict_freq = { word[0]: num for num, word in enumerate(stopwords.values, 1) }
 
 def ngrams(word, n):
@@ -72,7 +80,7 @@ def average_ngram_feature(l_ngram_feature):
     return sum(l_ngram_feature)/len(l_ngram_feature) if l_ngram_feature else 0
 
 
-model = load(open('../models/xgb_clf_opt.pkl', 'rb'))
+model = load(open('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/models/xgb_clf_opt.pkl', 'rb'))
 
 st.title("DGA Detector")
 host = st.text_input("Enter domain name:")
@@ -95,5 +103,3 @@ if st.button("Is it legit or DGA-generated?"):
         st.write("This is DGA-generated")
     else:
         st.write("This is a legit domain")
-    
-
