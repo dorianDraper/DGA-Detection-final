@@ -16,5 +16,4 @@ xgboost
 requests
 tldextract
 regex
-pickle
 collections
