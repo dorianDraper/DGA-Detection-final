@@ -22,3 +22,8 @@ st.markdown(
 """
 )
 
+st.markdown("""
+    <div style="display: flex; align-items: center; justify-content: center; margin-top: 200px;">
+        <span style="margin-right: 20px;">© Powered & Developed by <b>Jorge Payà</b></span>
+    </div>
+    """, unsafe_allow_html=True)
