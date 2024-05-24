@@ -16,4 +16,3 @@ xgboost
 requests
 tldextract
 regex
-collections
