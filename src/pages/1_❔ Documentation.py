@@ -37,7 +37,7 @@ st.markdown("""
             """
 )
 
-st.image('/src/img/botmaster.png')
+st.image('../src/img/botmaster.png')
 
 st.markdown(
     """   
