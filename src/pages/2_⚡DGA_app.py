@@ -146,7 +146,7 @@ if st.button("Is it legit or DGA-generated?"):
         prediction = model.predict(df)
         probability = model.predict_proba(df)
         if prediction[0] == 1:
-            st.write(f"This is DGA-generated with a probability of %.2f%%" % (probability[0][1] * 100))
+            st.write(f"The domain name :red['_{host}_'] is DGA-generated with a probability of %.2f%%" % (probability[0][1] * 100))
             st.markdown("""
                         You can submit this domain to URLhaus. [URLhaus](https://urlhaus.abuse.ch/about/) is a project operated by abuse.ch. 
                         The purpose of the project is to collect, track and share malware URLs, helping 
