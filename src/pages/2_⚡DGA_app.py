@@ -10,7 +10,7 @@ from collections import Counter
 
 st.set_page_config(page_title="DGA Detector", 
                    page_icon="⚡", 
-                   layout="centered") # initial_sidebar_state="collapsed"
+                   layout="centered") 
 
 st.markdown(
     """
@@ -60,7 +60,7 @@ def entropy(host):
     return -sum( count/lns * np.log2(count/lns) for count in p.values())
 
 
-stopwords = load(open('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/data/raw/top_english_words.pkl', 'rb'))
+stopwords = load(open('../data/raw/top_english_words.pkl', 'rb'))
 dict_freq = { word[0]: num for num, word in enumerate(stopwords.values, 1) }
 
 def ngrams(word, n):
@@ -84,7 +84,7 @@ def average_ngram_feature(l_ngram_feature):
     return sum(l_ngram_feature)/len(l_ngram_feature) if l_ngram_feature else 0
 
 
-model = load(open('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/models/xgb_clf_opt.pkl', 'rb'))
+model = load(open('../models/xgb_clf_opt.pkl', 'rb'))
 
 st.title("DGA Detector")
 host = st.text_input("Enter domain name:")

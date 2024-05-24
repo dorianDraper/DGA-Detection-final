@@ -19,7 +19,7 @@ st.markdown(
     """
 )
 
-st.image('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/src/img/dnsprotocol.png')
+st.image('../src/img/dnsprotocol.png')
 
 st.markdown("""
     #### What is a DGA?
@@ -37,7 +37,7 @@ st.markdown("""
             """
 )
 
-st.image('C:/Users/Jorge Payà/Desktop/4Geeks/Final Project/Code/DGA-Detection-final/src/img/botmaster.png')
+st.image('/src/img/botmaster.png')
 
 st.markdown(
     """   

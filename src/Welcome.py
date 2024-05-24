@@ -7,8 +7,6 @@ st.set_page_config(page_title="DGA Detector",
 
 st.write("# Welcome to DGA Detection Application! 👋")
 
-# st.sidebar.success("Select")
-
 st.markdown(
     """
     The purpose of this app is to tell DGA-generated and non-DGA-generated domains apart using a combination of 
